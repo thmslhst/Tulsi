@@ -1,0 +1,13 @@
+<div id="params">
+    <label for="osc-out">OSC output port :</label>
+    <input id="osc-out" type="text" ng-model="osc.output" ng-change="onPortChange()"/>
+
+    <label for="osc-in">OSC input port :</label>
+    <input id="osc-in" type="text" ng-model="osc.input" ng-change="onPortChange()"/>
+</div>
+
+<div id="address-inputs">
+    <input ng-repeat="fader in faders" type="text" ng-model="fader.address"/>
+</div>
+
+<fader ng:class="{true:'bright', false:''}[$index % 2 == 0]" callback="onFaderInput" ng-repeat="fader in faders" address="fader.address" y="fader.y | normalizeRange"></fader>

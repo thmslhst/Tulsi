@@ -1,0 +1,99 @@
+// bower:scss
+// endbower
+
+$font: "Courier New", sans;
+
+$inputPadding: 2%;
+$inputWidth: (100%/8)-($inputPadding*2);
+
+/*@media screen and (max-width: 640px) {
+  #params {
+    display: none;
+  }
+}*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: $font;
+}
+
+#params{
+  width: 98%;
+  padding: 1%;
+  background-color: #3f4dff;
+
+  *{
+    width: 21%;
+    display: inline-block;
+  }
+}
+
+#address-inputs{
+  width: 100%;
+  background-color: #3f4dff;
+
+  input{
+    width: $inputWidth;
+    float: left;
+  }
+}
+
+label{
+  text-align: center;
+}
+
+input{
+  color: #000;
+  background-color: #fff;
+  margin: 0;
+  padding: $inputPadding;
+  outline: none;
+  border: none;
+
+  font-family: $font;
+  text-align: center;
+
+  -webkit-transition: all 0.30s;
+  -moz-transition: all 0.30s;
+  -ms-transition: all 0.30s;
+  -o-transition: all 0.30s;
+  transition: all 0.30s;
+}
+
+input:focus{
+  color: #fff;
+  background-color: #000;
+}
+
+$faderWidth: 100% / 8;
+$faderHeight: 100%;
+
+.fader {
+  width: $faderWidth;
+  height: $faderHeight;
+  float: left;
+  /*border-radius: 999px;*/
+  background-color: rgb(122, 233, 175);
+
+  .knob {
+    width: 0;
+    height: 0;
+    padding: 50%;
+    /*border-radius: 999px;*/
+    background-color: #FFFBE0;
+  }
+}
+
+.bright {
+  background-color: aquamarine;
+}
